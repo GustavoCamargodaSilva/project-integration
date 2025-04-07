@@ -1,5 +1,6 @@
 package com.gustavocamargo.projetointegrador.entities;
 
+import com.gustavocamargo.projetointegrador.dtos.CategoryDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,5 +21,10 @@ public class Category {
     public Category(Long id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Category(CategoryDTO categoryDTO) {
+        this.id = categoryDTO.getId();
+        this.name = categoryDTO.getName();
     }
 }
