@@ -17,10 +17,12 @@ public class CategoryDTO {
     private Long id;
 
     @NotNull
+    @Size(min = 1 , max = 20)
     private String name;
 
     public CategoryDTO (Category category){
         this.id = category.getId();
         this.name = category.getName();
     }
+
 }
